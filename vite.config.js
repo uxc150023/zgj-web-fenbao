@@ -92,21 +92,30 @@ export default defineConfig((mode, command) => {
           main: resolve(__dirname, 'index.html')
         },
         output: {
-          // manualChunks: id => {
-          //   // console.log("id-------------",id);
-          //   if (id.includes('node_modules/echarts')) {
-          //     return 'chunk-echarts'
-          //   }
-          //   if (id.includes('node_modules/element-plus')) {
-          //     return 'chunk-element-plus'
-          //   }
-          //   if (id.includes('/lib/vform')) {
-          //     return 'chunk-vform'
-          //   }
-          //   if (id.includes('/node_modules/ant-design-vue/')) {
-          //     return 'chunk-ant-design-vue'
-          //   }
-          // }
+          manualChunks: id => {
+            // console.log("id-------------",id);
+            if (id.includes('node_modules/echarts')) {
+              return 'chunk-echarts'
+            }
+            if (id.includes('node_modules/element-plus')) {
+              return 'chunk-element-plus'
+            }
+            if (id.includes('node_modules/@vue/')) {
+              return 'chunk-vue'
+            }
+            if (id.includes('/lib/vform')) {
+              return 'chunk-vform'
+            }
+            if (id.includes('/node_modules/ant-design-vue/')) {
+              return 'chunk-ant-design-vue'
+            }
+            if (id.includes('/node_modules/@ant-design/icons-svg/')) {
+              return 'chunk-@ant-design-icons-svg'
+            }
+            if (id.includes('/node_modules/@ant-design/icons-vue/')) {
+              return 'chunk-@ant-design-icons-vue'
+            }
+          }
         }
       },
       chunkSizeWarningLimit: 20000,
