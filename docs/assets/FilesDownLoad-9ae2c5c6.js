@@ -1,1 +1,0 @@
-import{g as n}from"./chunk-vform-2b3347cb.js";import{as as s,o}from"./chunk-vue-0eb5cee7.js";import"./chunk-element-plus-b8773542.js";import"./chunk-ant-design-vue-bd7f8294.js";import"./chunk-@ant-design-icons-svg-8f5189a2.js";import"./chunk-@ant-design-icons-vue-ff9a333c.js";const t=n({},[["render",function(n,t){return s(),o("div")}]]);export{t as default};
