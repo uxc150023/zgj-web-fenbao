@@ -86,7 +86,6 @@ export default defineConfig((mode, command) => {
       minify: 'terser',
       sourcemap: false,
       brotliSize: true,
-      outDir: 'docs',
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html')
@@ -100,20 +99,14 @@ export default defineConfig((mode, command) => {
             if (id.includes('node_modules/element-plus')) {
               return 'chunk-element-plus'
             }
-            if (id.includes('node_modules/@vue/')) {
-              return 'chunk-vue'
-            }
             if (id.includes('/lib/vform')) {
               return 'chunk-vform'
             }
-            if (id.includes('/node_modules/ant-design-vue/')) {
-              return 'chunk-ant-design-vue'
-            }
-            if (id.includes('/node_modules/@ant-design/icons-svg/')) {
-              return 'chunk-@ant-design-icons-svg'
-            }
-            if (id.includes('/node_modules/@ant-design/icons-vue/')) {
-              return 'chunk-@ant-design-icons-vue'
+            // if (id.includes('/node_modules/ant-design-vue/')) {
+            //   return 'chunk-ant-design-vue'
+            // }
+            if (id.includes('/node_modules/@ant-design/')) {
+              return 'chunk-@ant-design'
             }
           }
         }
