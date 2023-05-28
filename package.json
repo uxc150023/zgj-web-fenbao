@@ -1,7 +1,8 @@
 {
-  "name": "zhangin",
+  "name": "zgj-web-fenbao",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://uxc150023.github.io/zgj-web-fenbao",
   "scripts": {
     "serve": "node --max_old_space_size=6144 node_modules/@vue/cli-service/bin/vue-cli-service.js serve",
     "lint": "vue-cli-service lint",
