@@ -1,1 +1,0 @@
-System.register([],(function(e,s){"use strict";return{execute:function(){e("a","/zgj-web-fenbao/assets/step_icon1-b44d5b08.svg"),e("b","/zgj-web-fenbao/assets/step_icon2-4b777c38.svg"),e("c","/zgj-web-fenbao/assets/step_icon3-e8a6f09f.svg"),e("_","/zgj-web-fenbao/assets/form_icon-5abae060.svg")}}}));
