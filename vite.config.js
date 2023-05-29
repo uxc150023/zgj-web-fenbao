@@ -80,6 +80,7 @@ export default defineConfig((mode, command) => {
         symbolId: 'icon-[dir]-[name]'
       })
     ],
+    base: '/zgj-web-fenbao/',
     build: {
       target: 'es2015',
       minify: 'terser',
