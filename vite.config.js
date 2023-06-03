@@ -92,22 +92,29 @@ export default defineConfig((mode, command) => {
         },
         output: {
           manualChunks: id => {
-            // console.log("id-------------",id);
-            if (id.includes('node_modules/echarts')) {
-              return 'chunk-echarts'
+            if (id.includes('node_modules')) {
+              return id
+                .toString()
+                .split('node_modules/')[1]
+                .split('/')[0]
+                .toString()
             }
-            if (id.includes('node_modules/element-plus')) {
-              return 'chunk-element-plus'
-            }
-            if (id.includes('/lib/vform')) {
-              return 'chunk-vform'
-            }
-            // if (id.includes('/node_modules/ant-design-vue/')) {
-            //   return 'chunk-ant-design-vue'
+            // // console.log("id-------------",id);
+            // if (id.includes('node_modules/echarts')) {
+            //   return 'chunk-echarts'
             // }
-            if (id.includes('/node_modules/@ant-design/')) {
-              return 'chunk-@ant-design'
-            }
+            // if (id.includes('node_modules/element-plus')) {
+            //   return 'chunk-element-plus'
+            // }
+            // if (id.includes('/lib/vform')) {
+            //   return 'chunk-vform'
+            // }
+            // // if (id.includes('/node_modules/ant-design-vue/')) {
+            // //   return 'chunk-ant-design-vue'
+            // // }
+            // if (id.includes('/node_modules/@ant-design/')) {
+            //   return 'chunk-@ant-design'
+            // }
           }
         }
       },
