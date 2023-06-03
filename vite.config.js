@@ -80,7 +80,7 @@ export default defineConfig((mode, command) => {
         symbolId: 'icon-[dir]-[name]'
       })
     ],
-    base: '/zgj-web-fenbao/',
+    base: env.VITE_BASE_PATH,
     build: {
       target: 'es2015',
       minify: 'terser',
